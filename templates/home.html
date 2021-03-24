@@ -1,0 +1,90 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Prediction</title>
+</head>
+
+<body>
+
+    <!-- Website Title -->
+    <div class="container">
+        <h1 class='container-heading'>💮 Iris Flower Prediction 💮</h1>
+        <div class='description'>
+            <p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+        </div>
+    </div>
+
+
+    <h2>Please enter your flower measurements below:</h2>
+        
+    <form method="POST", action="{{url_for('home')}}">
+        <b> Sepal Length:  <input type="text", name='a', placeholder="enter 1"> <br><br>
+        Sepal Width:  <input type="text", name='b', placeholder="enter 2"> <br><br>
+        Petal Length:  <input type="text", name='c', placeholder="enter 3"> <br><br>
+        Petal Width: <input type="text", name='d', placeholder="enter 4"> <br><br><br></b>
+        <input type="submit" , value='Predict' >
+    </form>
+
+        
+    <!-- Footer -->
+    <div class='footer'>
+        <p class='footer-description'>Made with ❤️ by Swapnil Vishwakarma.</p>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: rgb(245, 239, 225);
+            text-align: center;
+            padding: 0px;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            padding: 20px;
+            flex-shrink: 0;
+            background: linear-gradient(45deg, #C4CBF2, #D2D3F3, #E1DAF4, #EFE2F4, #FDE9F5, #EFE2F4, #E1DAF4, #D2D3F3, #C4CBF2);
+            background-size: 500% 500%;
+            animation: change-gradient 10s ease-in-out infinite;
+        }
+
+        /* Website Title */
+        .container{
+            padding: 30px;
+            position: relative;
+            background: linear-gradient(45deg, #C4CBF2, #D2D3F3, #E1DAF4, #EFE2F4, #FDE9F5, #EFE2F4, #E1DAF4, #D2D3F3, #C4CBF2);
+            background-size: 500% 500%;
+            animation: change-gradient 10s ease-in-out infinite;
+        }
+        @keyframes change-gradient {
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+
+        .container-heading{
+            margin: 0;
+        }
+
+
+    </style>
+
+</body>
+
+</html>
