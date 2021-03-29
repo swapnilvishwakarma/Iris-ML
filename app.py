@@ -23,6 +23,13 @@ def home():
     pred = model.predict(arr)
     return render_template('predict.html', data=pred)
 
+@app.route('/predict', methods=['POST'])
+def api_prediction(url, form_data):
+    r = requests.post(url, data=form_data)
+    htmlText = r.text
+    soup = BeautifulSoup(htmlText, 'html.parser')
+    print(soup.find('h2').text)
+    print(soup.find_all('h1')[-1].text)
 
 if __name__ == "__main__":
     app.run(debug=True)
